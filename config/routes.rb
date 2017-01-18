@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  get 'tags/show'
+
   root to: 'articles#index'
 
   resources :articles do
     resources :comments 
   end
+  resources :tags
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
